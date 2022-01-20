@@ -4,6 +4,8 @@ Hi there, this is Andrea, an analyst. I enjoy working with data and translating 
 
 Welcome to my small side projects! 
 
+
+==================================
 Project_1_Covid.sql:
 
 Business Requirement: To understand the relationship between Covid-19 cases and mortality numbers, and the rates of mortality among Covid-19 cases as well as the rates of 
