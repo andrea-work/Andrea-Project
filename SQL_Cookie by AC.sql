@@ -1,5 +1,5 @@
 /*
-Cookie Data Exploration, SQL Queries by Andrea Chen.
+Cookie Data Exploration, SQL Queries by Andrea Chen.    (Raw Date Source by Kevin Stratvert.)
 
 Create Table, Update Data from Excel File to the existing SQL Table, Add Column, Insert data to a new column, Drop column, Check the file total row is accurate, 
 Clean/Delete all data in the existing table. If it requires to update the whole table again from the Excel file, import the updated Excel file and then insert 
@@ -7,9 +7,6 @@ all data into the empty SQL table,
 Aggregate Functions, Partition By, CTE's (With Query), Create Temp Table, Create Views, 
 Create Procedure w/ or w/o parameter(s), Case, Having
 
-
-Raw Date Source by Kevin Stratvert:
-https://onedrive.live.com/?authkey=%21AMGFcNnnBmsa3Js&id=B09F9559F6A16B6C%2171378&cid=B09F9559F6A16B6C
 */
 -------------------------------------------------------------------------------------
 -- 1. Create Table
