@@ -8,7 +8,6 @@ Aggregate Functions, Partition By, CTE's (With Query), Create Temp Table, Create
 Case, Having
 
 Fictional Raw Dataset Source by Kevin Stratvert:
-https://onedrive.live.com/?authkey=%21AMGFcNnnBmsa3Js&id=B09F9559F6A16B6C%2171378&cid=B09F9559F6A16B6C
 */
 -------------------------------------------------------------------------------------
 -- 1. Create Table
