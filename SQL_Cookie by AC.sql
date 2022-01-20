@@ -1,7 +1,9 @@
 /*
 Cookie Data Exploration, SQL Queries by Andrea Chen.
 
-Create Table, Update Data from Excel File to the existing SQL Table, Add Column, Insert data to a new column, Drop column, Check the file total row is accurate, Clean/Delete all data in the existing table. If it requires to update the whole table again from the Excel file, import the updated Excel file and then nsert all data into the empty SQL table,
+Create Table, Update Data from Excel File to the existing SQL Table, Add Column, Insert data to a new column, Drop column, Check the file total row is accurate, 
+Clean/Delete all data in the existing table. If it requires to update the whole table again from the Excel file, import the updated Excel file and then insert 
+all data into the empty SQL table,
 Aggregate Functions, Partition By, CTE's (With Query), Create Temp Table, Create Views, 
 Create Procedure w/ or w/o parameter(s), Case, Having
 
@@ -20,7 +22,9 @@ UnitsSold numeric,
 Ddate datetime)
 
 ---------------------------------------------------------------------------------------
--- 2. Before running the Insert statement, import "Order" Excel file to SQL Sever. This the Excel file will be updated weekly/monthly, so ensure the format is the same. If the updated Excel file name is same, during importing process, select Edit Mappings "delete row in the destination table". Of course, writing a query to clean all old data imported from the previous version of Excel is another approach. There are other options.) 
+-- 2. Before running the Insert statement, import "Order" Excel file to SQL Sever. This the Excel file will be updated weekly/monthly, so ensure the format is the same. 
+-- If the updated Excel file name is same, during importing process, select Edit Mappings "delete row in the destination table". 
+-- Of course, writing a query to clean all old data imported from the previous version of Excel is another approach. There are other options. 
 -- Highlight Database -> Tasks -> Import Data, This is not working for me, so I have to go to MS Server Server under All Apps -> Import/Export Data (64-bit)
 
 Insert Into CookieOrder
@@ -54,7 +58,8 @@ Select count(*)
 From CookieOrder
 
 ---------------------------------------------------------------------------------------
--- 7. Be very careful to try this. Delete all value in table. If the Excel file is not just appending new data. Only use this When the Excel file includes all historical data updates and new updates. Clean the all table before Insert new data.
+-- 7. Be very careful to try this. Delete all value in table. If the Excel file is not just appending new data. 
+-- Only use this When the Excel file includes all historical data updates and new updates. Clean the all table before Insert new data.
 -- Notes: If the Excel only includes partial historical updates and new updates, then try Update, don't delete all values in the table.
 
 Delete From [dbo].[CookieOrder]
