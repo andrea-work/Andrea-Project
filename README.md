@@ -27,7 +27,7 @@ and to define the Key Performance Indicator (KPI). The database would also be us
 
 The Approach: The first step is to know what data is available. The second step is to collect all available data. The third step is to create tables in the SQL server and 
 ensure all data types are correct. Then SQL aggregation functions would be used to understand the total units sold, the maximum units sold in one day, and net revenue. 
-Later, the MAX function would be used to identify which customer generated the highest net revenue and to define the KPI using the medium total net revenue among customers 
+Later, the MAX function would be used to identify which customer generated the highest net revenue and to define the KPI using the median total net revenue among customers 
 and applying the CASE function to set KPI as “Below Goal” and “Meet or Above Goal.” In addition, create a VIEW, so anyone who does not know how to write the query can easily 
 connect to the VIEW to retrieve the data.
 
