@@ -22,14 +22,11 @@ Data Source: This project is using the data on the "Our World in Data" website l
 ==================================
 SQL_Cookie by AC.sql
 
-Business Requirement: To create a new database for a cookie company to identify which cookie type generated the most net revenue, which customer generated the highest net revenue,
-and to define the Key Performance Indicator (KPI). The database would also be used to explore the data to seek if any information might be useful in the future.
+Business Requirement: To create a new database for a cookie company to identify which cookie type generated the most net revenue, which customer generated the highest net revenue, and to define the net revenue goal. The database would also be used to explore the data to seek if any information might be useful in the future.
 
 The Approach: The first step is to know what data is available. The second step is to collect all available data. The third step is to create tables in the SQL server and 
 ensure all data types are correct. Then SQL aggregation functions would be used to understand the total units sold, the maximum units sold in one day, and net revenue. 
-Later, the MAX function would be used to identify which customer generated the highest net revenue and to define the KPI using the median total net revenue among customers 
-and applying the CASE function to set KPI as “Below Goal” and “Meet or Above Goal.” In addition, create a VIEW, so anyone who does not know how to write the query can easily 
-connect to the VIEW to retrieve the data.
+Later, the MAX function would be used to identify which customer generated the highest net revenue and to define the net revenue goal using the median total net revenue among customers and applying the CASE function to set the net revenue goal as “Below Goal” and “Meet or Above Goal.” In addition, create a VIEW, so anyone who does not know how to write the query can easily connect to the VIEW to retrieve the data.
 
 Others: The comments in the code are designed to help you understand the process and code.
 
