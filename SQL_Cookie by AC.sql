@@ -229,9 +229,9 @@ From(
 	Sum(NetRevenue)TotalNetRevenue,
 	Rank() Over (Order By Sum(GrossRevenue) Desc) RankGross, 
 	Rank() Over (Order By Sum(NetRevenue) Desc) RankNet
-    From vCookie
+        From vCookie
 	Group By Name
-	)t
+    )t
 Where RankGross = 1 And RankNet = 1
 
 
