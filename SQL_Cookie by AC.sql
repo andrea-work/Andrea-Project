@@ -102,14 +102,14 @@ Order By 2 Desc
 ---------------------------------------------------------------------------------------
 -- 10. Max Units of Cookie sold in one day? (This information may be useful for the marketing, manufactory and inventory.)
 
-Select Product, Max(UnitsSold)
+Select Product, Date, Max(UnitsSold) MaxUnitsSoldDayByProduct
 From CookieOrder
-Group By Product
+Group By Product, Date
 Order By 2 Desc
 
 
-Select Distinct Product, 
-Max(UnitsSold) Over (Partition By (Product) Order By Product) MaxUnitsSoldDay
+Select Distinct Product, Date,
+Max(UnitsSold) Over (Partition By Product, Date Order By Product) MaxUnitsSoldDayByProduct
 From CookieOrder
 Order By 2 Desc
 
@@ -219,7 +219,21 @@ Group By CookieType
 Select Name Customer, Sum(GrossRevenue) TotalGrossRevenue, Sum(NetRevenue) TotalNetRevenue
 From vCookie
 Group By Name
-Order by 2 Desc
+Order by 2 Desc;
+
+
+Select Customer, TotalGrossRevenue, TotalNetRevenue
+From(
+	Select Name Customer,
+	Sum(GrossRevenue) TotalGrossRevenue,
+	Sum(NetRevenue)TotalNetRevenue,
+	Rank() Over (Order By Sum(GrossRevenue) Desc) RankGross, 
+	Rank() Over (Order By Sum(NetRevenue) Desc) RankNet
+    From vCookie
+	Group By Name
+	)t
+Where RankGross = 1 And RankNet = 1
+
 
 
 -------------------------------------------------------------------------------------------------------
