@@ -155,3 +155,18 @@ Where dea.continent Is Not Null
 
 Select *
 From PercentPopulationVaccinated
+
+--------- Create Procedure 2025-02-06 (Database: ANDREA\SQLEXPRESS.Project)
+Create Procedure GetByContinetAndDate
+@continent nvarchar(50),
+@date Date
+As
+Begin
+	Select *
+	from CovidVaccinations
+	where continent = @continent 
+	and date > @date;
+End;
+
+--------- Execute Procedure 2025-02-06 NOTES: Validate the data SQL Server against Power BI Reports/Dashboards (accuracy and quality)
+EXEC GetByContinetAndDate @continent = 'Europe', @date = '2021-09-01';
